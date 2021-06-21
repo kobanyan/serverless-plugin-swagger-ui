@@ -134,14 +134,16 @@ export class ServerlessSwaggerUi {
     documentationFileName: string;
   }) => {
     const configFileName = 'config.yaml';
+    const obj = {
+      ...defaultSwaggerUiConfig,
+      ...swaggerUiConfig,
+      configUrl: undefined,
+      url: `./${documentationFileName}`,
+    };
+    delete obj.configUrl;
     await fs.writeFile(
       path.join(swaggerUiPath, configFileName),
-      yaml.dump({
-        ...defaultSwaggerUiConfig,
-        ...swaggerUiConfig,
-        configUrl: undefined,
-        url: `./${documentationFileName}`,
-      })
+      yaml.dump(obj)
     );
   };
   private writeDocumentationFile = async ({
