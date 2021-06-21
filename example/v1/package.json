@@ -1,0 +1,14 @@
+{
+  "name": "serverless-plugin-swagger-ui-example-v1",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "sls deploy",
+    "swagger": "sls swaggerUi"
+  },
+  "devDependencies": {
+    "serverless": "^1.80.0",
+    "serverless-plugin-swagger-ui": "file:../../"
+  }
+}

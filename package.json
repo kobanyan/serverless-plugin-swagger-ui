@@ -1,0 +1,71 @@
+{
+  "name": "serverless-plugin-swagger-ui",
+  "version": "0.0.0-development",
+  "description": "A serverless plugin to build Swagger UI static site",
+  "keywords": [
+    "serverless",
+    "swagger",
+    "aws",
+    "documentation"
+  ],
+  "author": "kobanyan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kobanyan/serverless-plugin-swagger-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kobanyan/serverless-plugin-swagger-ui/issues"
+  },
+  "homepage": "https://github.com/kobanyan/serverless-plugin-swagger-ui#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": ["main"]
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "prebuild": "rimraf ./lib",
+    "build": "tsc",
+    "postbuild": "cp src/index.html lib/index.html",
+    "lint": "eslint 'src/**/*.ts' '*.js'",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.930.0",
+    "recursive-copy": "^2.0.11",
+    "swagger-ui-dist": "^3.50.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/js-yaml": "^4.0.1",
+    "@types/node": "^12.20.15",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^6.0.0",
+    "js-yaml": "^4.1.0",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.1",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.4.4",
+    "typescript": "^4.3.3"
+  },
+  "peerDependencies": {
+    "serverless": ">=1.36.3 <3.0.0"
+  }
+}

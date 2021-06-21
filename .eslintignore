@@ -1,0 +1,6 @@
+/.rpt2_cache/**
+/.vscode/**
+/example/**
+/lib/**
+/node_modules/**
+**/__tests__/**
