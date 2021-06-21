@@ -36,7 +36,7 @@ custom:
     extensions: integrations # default value
     # [Optional] The name of local directory to build Swagger UI static site
     swaggerUiDirectoryName: .swagger-ui # default value
-    # [Optional] Swagger UI configuration. See https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/ . 'configUrl' will be ignored.
+    # [Optional] Swagger UI configuration. See https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/ . 'configUrl' and 'url' will be ignored.
     swaggerUiConfig: # default value is the below
       dom_id: '#swagger-ui'
       deepLinking: true
