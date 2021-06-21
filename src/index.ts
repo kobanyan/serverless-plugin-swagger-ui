@@ -22,7 +22,7 @@ type SwaggerUiConfig = {
   [key: string]: unknown;
 };
 
-type Config = {
+type ValidatedConfig = {
   s3Bucket?: string;
   exportType: ExportType;
   accepts: Accepts;
@@ -31,7 +31,9 @@ type Config = {
   swaggerUiConfig?: SwaggerUiConfig;
 };
 
-type RawConfig = Partial<Config>;
+type RawConfig = Partial<ValidatedConfig>;
+
+export type ServerlessSwaggerUiConfig = RawConfig;
 
 type Serverless = {
   getProvider: (providerName: string) => {
@@ -46,7 +48,7 @@ type Serverless = {
   };
   service: {
     custom?: {
-      swaggerUi?: Config;
+      swaggerUi?: ValidatedConfig;
     };
   };
   config: {
