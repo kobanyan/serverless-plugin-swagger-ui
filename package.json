@@ -49,7 +49,7 @@
     "swagger-ui-dist": "^4.5.0"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.1",
+    "@types/js-yaml": "^4.0.5",
     "@types/node": "^12.20.15",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
