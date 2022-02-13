@@ -40,7 +40,7 @@
     "prebuild": "rimraf ./lib",
     "build": "tsc",
     "postbuild": "cp src/index.html lib/index.html",
-    "lint": "eslint 'src/**/*.ts' '*.js'",
+    "lint": "eslint 'src/**/*.ts'",
     "semantic-release": "semantic-release"
   },
   "dependencies": {
@@ -51,9 +51,9 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.1",
     "@types/node": "^12.20.15",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.27.0",
-    "eslint": "^7.28.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^6.0.0",
     "js-yaml": "^4.1.0",
